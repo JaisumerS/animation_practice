@@ -26,6 +26,7 @@ window.onmousemove = e => {
 
 const track = document.getElementById("image-tracking");
 let percentage = 0;
+let clicked = false;
 
 window.onkeydown = e => {
     if (e.key === 'ArrowLeft') {
