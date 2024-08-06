@@ -12,6 +12,7 @@ body {
     object-fit: cover;
     object-position: center;
     transition: all 500ms ease-in-out;
+    cursor: pointer;
 }
 
 #image-tracking {
@@ -27,4 +28,25 @@ body {
     transform: translateY(-10px);
     border: 2px solid white;
     border-radius: 0;
+}
+
+.clicked-image {
+    width: 70vw;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    border: none;
+    box-shadow: 0 0 10px 5px white;
+}
+
+.shrunken {
+    width: 100vw;
+    height: 20vh;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
