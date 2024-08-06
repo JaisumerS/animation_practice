@@ -22,6 +22,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%);
+    transition: all 500ms ease-in-out;
 }
 
 #image-tracking .image:hover{
