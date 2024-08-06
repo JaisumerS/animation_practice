@@ -27,7 +27,6 @@ body {
 #image-tracking .image:hover{
     transform: translateY(-10px);
     border: 2px solid white;
-    border-radius: 0;
 }
 
 .clicked-image {
