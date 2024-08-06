@@ -4,6 +4,7 @@ body {
     background-color: black;
     margin: 0rem;
     overflow: hidden;
+    transition: background-image 1s ease-in-out;
 }
 
 #image-tracking  .image{
@@ -11,8 +12,9 @@ body {
     height: 56vmin;
     object-fit: cover;
     object-position: center;
-    transition: all 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
     cursor: pointer;
+    border: 0px solid black;
 }
 
 #image-tracking {
@@ -30,14 +32,21 @@ body {
     border: 2px solid white;
 }
 
-.clicked-image {
-    height: 100vh;
-    object-fit: contain;
-    box-shadow: 0 0 10px 5px white;
-    transition: all 500ms ease-in-out;
+/*@keyframes expand {
+    from {
+        width: 40vmin;
+        height: 56vmin;
+    }
+    to {
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
-.shrunken {
-    z-index: 1;
-    transform: scale(0.5);
+.clicked-image {
+    animation: expand 500ms ease-in-out forwards;
+}*/
+
+#image-tracking.shrunken {
+    
 }
