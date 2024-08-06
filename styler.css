@@ -31,22 +31,12 @@ body {
 }
 
 .clicked-image {
-    width: 70vw;
-    height: 90vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    border: none;
+    height: 100vh;
+    object-fit: contain;
     box-shadow: 0 0 10px 5px white;
 }
 
 .shrunken {
-    width: 100vw;
-    height: 20vh;
-    top: auto;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
+    z-index: 1;
+    transform: scale(0.5);
 }
