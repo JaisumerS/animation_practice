@@ -48,3 +48,29 @@ function moveImages(delta) {
         );
     }
 }
+
+
+track.addEventListener('click', e => {
+    if (e.target.classList.contains('image')) {
+        if (clicked) {
+            resetImages();
+        } else {
+            expandImage(e.target);
+        }
+    }
+});
+
+function expandImage(image) {
+    clicked = true;
+    track.classList.add('shrunken');
+    image.classList.add('clicked-image');
+}
+
+function resetImages() {
+    clicked = false;
+    track.classList.remove('shrunken');
+    const clickedImage = document.querySelector('.clicked-image');
+    if (clickedImage) {
+        clickedImage.classList.remove('clicked-image');
+    }
+}
