@@ -34,6 +34,7 @@ body {
     height: 100vh;
     object-fit: contain;
     box-shadow: 0 0 10px 5px white;
+    transition: all 500ms ease-in-out;
 }
 
 .shrunken {
