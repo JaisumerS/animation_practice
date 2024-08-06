@@ -1,4 +1,4 @@
-const track = document.getElementById("image-tracking");
+/*const track = document.getElementById("image-tracking");
 
 window.onmousedown = e => {
     track.dataset.mousedownat = e.clientX;
@@ -21,5 +21,30 @@ window.onmousemove = e => {
 
     for(const image of track.getElementsByClassName("image")){
         image.animate({objectPosition: `${100 + newpercentage}% center`}, {duration: 1200, fill: "forwards"});
+    }
+}*/
+
+const track = document.getElementById("image-tracking");
+let percentage = 0;
+
+window.onkeydown = e => {
+    if (e.key === 'ArrowLeft') {
+        moveImages(10);
+    } else if (e.key === 'ArrowRight') {
+        moveImages(-10);
+    }
+};
+
+function moveImages(delta) {
+    percentage = Math.max(Math.min(percentage + delta, 0), -100);
+    track.animate(
+        { transform: `translate(${percentage}%, -50%)` },
+        { duration: 1200, fill: "forwards", easing: "ease-in-out" }
+    );
+    for (const image of track.getElementsByClassName("image")) {
+        image.animate(
+            { objectPosition: `${100 + percentage}% center` },
+            { duration: 1200, fill: "forwards", easing: "ease-in-out" }
+        );
     }
 }
