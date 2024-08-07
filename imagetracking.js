@@ -27,6 +27,7 @@ window.onmousemove = e => {
 const track = document.getElementById("image-tracking");
 let percentage = 0;
 let clicked = false;
+let clickedYPercentage = -50;
 
 window.onkeydown = e => {
     if (e.key === 'ArrowLeft') {
@@ -39,7 +40,7 @@ window.onkeydown = e => {
 function moveImages(delta) {
     percentage = Math.max(Math.min(percentage + delta, 0), -100);
     track.animate(
-        { transform: `translate(${percentage}%)` },
+        { transform: `translate(${percentage}%, ${clickedYPercentage}%)` },
         { duration: 1200, fill: "forwards", easing: "ease-in-out" }
     );
     for (const image of track.getElementsByClassName("image")) {
