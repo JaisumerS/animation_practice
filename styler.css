@@ -34,10 +34,10 @@ body {
 
 @keyframes shrink {
     from {
-        transform: translate(0%, 0%);
+        transform: translate(0%, -50%);
     }
     to {
-        transform: translate(0%, 0%), scale(0.5);
+        transform: translate(0%, 0%);
     }
 }
 
@@ -46,7 +46,7 @@ body {
         transform: translate(0%, 0%);
     }
     to {
-        transform: translate(0%, 0%);
+        transform: translate(0%, -50%);
     }
 }
 
@@ -55,6 +55,10 @@ body {
     animation: expand 500ms ease-in-out forwards;
 }*/
 
-.shrunken {
+.ashrink {
     animation: shrink 500ms forwards ease-in-out;
+}
+
+.acenter {
+    animation: center 500ms forwards ease-in-out;
 }

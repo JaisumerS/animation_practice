@@ -62,13 +62,15 @@ track.addEventListener('click', e => {
 
 function expandImage(image) {
     clicked = true;
-    track.classList.add('shrunken');
+    track.classList.add('ashrink');
+    track.classList.remove('acenter');
     /*image.classList.add('clicked-image');*/
 }
 
 function resetImages() {
     clicked = false;
-    track.classList.remove('shrunken');
+    track.classList.remove('ashrink');
+    track.classList.add('acenter');
     /*const clickedImage = document.querySelector('.clicked-image');
     if (clickedImage) {
         clickedImage.classList.remove('clicked-image');
