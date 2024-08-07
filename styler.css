@@ -32,7 +32,7 @@ body {
     border: 2px solid white;
 }
 
-@keyframes shrink {
+@keyframes bottom {
     from {
         transform: translate(0%, -50%);
     }
@@ -50,15 +50,39 @@ body {
     }
 }
 
+@keyframes shrink{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes expand{
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
 /*
 .clicked-image {
     animation: expand 500ms ease-in-out forwards;
 }*/
 
-.divshrink {
-    animation: shrink 500ms forwards ease-in-out;
+.divbottom {
+    animation: bottom 500ms forwards ease-in-out;
 }
 
 .divcenter {
     animation: center 500ms forwards ease-in-out;
+}
+
+.imgshrink {
+    animation: shrink 500ms forwards ease-in-out;
+}
+.imgexpand{
+    animation: expand 500ms forwards ease-in-out;
 }
