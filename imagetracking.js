@@ -42,7 +42,7 @@ function moveImages(delta) {
     if (clicked) {
         clickedYPercentage = 0;
     } else {
-        clickedYPercentage = 50;
+        clickedYPercentage = -50;
     }
     track.animate(
         { transform: `translate(${percentage}%, ${clickedYPercentage}%)` },
