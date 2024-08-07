@@ -66,15 +66,15 @@ function expandImage(image) {
     clicked = true;
     track.classList.add('divbottom');
     track.classList.remove('divcenter');
-    /*image.classList.add('clicked-image');*/
+    image.classList.add('imgexpand');
 }
 
 function resetImages() {
     clicked = false;
     track.classList.add('divcenter');
     track.classList.remove('divbottom');
-    /*const clickedImage = document.querySelector('.clicked-image');
+    const clickedImage = document.querySelector('.imgexpand');
     if (clickedImage) {
-        clickedImage.classList.remove('clicked-image');
-    }*/
+        clickedImage.classList.remove('imgexpand');
+    }
 }
