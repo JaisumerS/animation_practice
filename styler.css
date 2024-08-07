@@ -47,5 +47,5 @@ body {
 }*/
 
 .shrunken {
-    
+    animation: shrink 500ms forwards ease-in-out;
 }
