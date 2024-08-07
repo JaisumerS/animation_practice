@@ -55,10 +55,10 @@ body {
     animation: expand 500ms ease-in-out forwards;
 }*/
 
-.ashrink {
+.divshrink {
     animation: shrink 500ms forwards ease-in-out;
 }
 
-.acenter {
+.divcenter {
     animation: center 500ms forwards ease-in-out;
 }
