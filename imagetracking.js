@@ -39,7 +39,7 @@ window.onkeydown = e => {
 function moveImages(delta) {
     percentage = Math.max(Math.min(percentage + delta, 0), -100);
     track.animate(
-        { transform: `translate(${percentage}%, -50%)` },
+        { transform: `translate(${percentage}%)` },
         { duration: 1200, fill: "forwards", easing: "ease-in-out" }
     );
     for (const image of track.getElementsByClassName("image")) {
