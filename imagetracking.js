@@ -27,7 +27,6 @@ window.onmousemove = e => {
 const track = document.getElementById("image-tracking");
 let percentage = 0;
 let clicked = false;
-let clickedYPercentage = -50;
 
 window.onkeydown = e => {
     if (e.key === 'ArrowLeft') {
@@ -55,8 +54,10 @@ track.addEventListener('click', e => {
     if (e.target.classList.contains('image')) {
         if (clicked) {
             resetImages();
+            moveImages(0);
         } else {
             expandImage(e.target);
+            moveImages(0);
         }
     }
 });
@@ -70,8 +71,8 @@ function expandImage(image) {
 
 function resetImages() {
     clicked = false;
-    track.classList.remove('ashrink');
     track.classList.add('acenter');
+    track.classList.remove('ashrink');
     /*const clickedImage = document.querySelector('.clicked-image');
     if (clickedImage) {
         clickedImage.classList.remove('clicked-image');
