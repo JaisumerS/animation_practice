@@ -74,7 +74,7 @@ function resetImages() {
     track.classList.add('divcenter');
     track.classList.remove('divbottom');
     const clickedImage = document.querySelector('.imgexpand');
-    if (clickedImage) {
+    /*if (clickedImage) {
         clickedImage.classList.remove('imgexpand');
-    }
+    }*/
 }
