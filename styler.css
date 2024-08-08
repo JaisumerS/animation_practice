@@ -52,30 +52,27 @@ body {
 
 @keyframes shrink{
     from {
-        transform: scale(1);
+        transform: scale(3);
     }
     to {
-        transform: scale(0.5);
+        transform: scale(1);
     }
 }
 
 @keyframes expand{
     from {
-        transform: scale(0.5);
+        width: 40vmin;
+        height: 56vmin;
     }
     to {
-        transform: scale(1);
+        width: 100vw;
+        height: 100vmin;
     }
 }
-/*
-.clicked-image {
-    animation: expand 500ms ease-in-out forwards;
-}*/
 
 .divbottom {
     animation: bottom 500ms forwards ease-in-out;
 }
-
 .divcenter {
     animation: center 500ms forwards ease-in-out;
 }

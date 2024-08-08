@@ -66,7 +66,7 @@ function expandImage(image) {
     clicked = true;
     track.classList.add('divbottom');
     track.classList.remove('divcenter');
-    image.classList.add('imgexpand');
+    track.classList.add('imgexpand');
 }
 
 function resetImages() {
